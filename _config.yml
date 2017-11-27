@@ -2,7 +2,7 @@ plugins :
   - jekyll-assets
 
 assets : 
-  sources       : [_assets, customfolder]
+  sources       : [_assets, _customfolder]
   destination   : /assets
   digest        : true
   source_maps   : false
