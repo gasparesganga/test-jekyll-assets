@@ -1,7 +1,5 @@
 plugins :
   - jekyll-assets
-  - jekyll-paginate
-  - autoprefixer-rails
 
 assets : 
   sources       : [_assets, customfolder]
@@ -16,6 +14,3 @@ assets :
     img     : { integrity: true }
   caching       :
     enabled : false
-  precompile    : []
-  plugins       :
-    css     : { autoprefixer: {}}
