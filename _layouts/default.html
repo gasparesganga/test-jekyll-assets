@@ -12,6 +12,7 @@
             {% asset '{{ filename }}' %}
             <!-- {{ filename }} -->
         {% endfor %}
+        <!-- END LOOP -->
         
     </head>
     
@@ -19,11 +20,13 @@
         <main>
             {{ content }}
         </main>
-    
+        
+        
         <!-- And the page defined JS here: -->
         {% for filename in page.assets.js %}
             {% asset '{{ filename }}' %}
             <!-- {{ filename }} -->
         {% endfor %}
+        <!-- END LOOP -->
     </body>
 </html>
