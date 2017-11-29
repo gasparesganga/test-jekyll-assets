@@ -5,28 +5,11 @@
         <title>Test Jekyll Assets</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% asset img/favicon.ico %}
-        
-        <!-- Let's loop the page defined CSS here: -->
-        {% for filename in page.assets.css %}
-            {% asset '{{ filename }}' %}
-            <!-- {{ filename }} -->
-        {% endfor %}
-        <!-- END LOOP -->
-        
     </head>
     
     <body>
         <main>
             {{ content }}
         </main>
-        
-        
-        <!-- And the page defined JS here: -->
-        {% for filename in page.assets.js %}
-            {% asset '{{ filename }}' %}
-            <!-- {{ filename }} -->
-        {% endfor %}
-        <!-- END LOOP -->
     </body>
 </html>
