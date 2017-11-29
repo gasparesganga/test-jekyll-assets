@@ -1,5 +1,6 @@
 include :
   - .htaccess
+  - .htaccess_static
 plugins :
   - jekyll-assets
 
