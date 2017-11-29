@@ -1,4 +1,0 @@
-### No front-matter here, the filesmatch filter is left untouched
-<FilesMatch ".(html|htm)$">
-    ### Something here, it doesn't matter now
-</FilesMatch>
