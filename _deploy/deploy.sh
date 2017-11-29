@@ -5,4 +5,7 @@ bundle exec jekyll build
 
 cd _site
 ls -lR
-cat index.html
+cat .htaccess
+cat email.html
+cat loop.html
+
