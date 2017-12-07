@@ -1,6 +1,7 @@
 
 plugins :
   - jekyll-assets
+  - mini_magick
 
 assets : 
   sources       : [_assets]
