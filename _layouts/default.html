@@ -22,9 +22,11 @@
             {% for i in (1..3) %}
                 {% capture filename %}img/file{{ i }}.jpg{% endcapture %}
                 <!-- {{ filename }} -->
-                {% asset '{{ filename }}' %}
                 
-                <!-- Ok, no problem with regular img tag, but let's try ImageMagick: -->
+                <!-- I need the @path first to be used with other page components (client-side plugins, irrelevant here): -->
+                {% asset '{{ filename }}' @path %}
+                
+                <!-- Ok, now the actual <img> tag, processed with ImageMagick: -->
                 {% asset '{{ filename }}' magick:resize='300' alt="{{ i }}" %}
             {% endfor %}
             <!-- END LOOP -->
