@@ -1,6 +1,0 @@
----
----
-### The filesmatch filter is being deleted!
-<FilesMatch ".(html|htm)$">
-    ### Something here, it doesn't matter now
-</FilesMatch>

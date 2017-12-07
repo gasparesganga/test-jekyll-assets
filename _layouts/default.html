@@ -5,12 +5,12 @@
         <title>Test Jekyll Assets</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% asset img/favicon.ico %}
         
-        <!-- Let's loop the page defined CSS here: -->
-        {% for filename in page.assets.css %}
-            {% asset '{{ filename }}' %}
+        <!-- Loop CSS files: -->
+        {% for i in (1..3) %}
+            {% capture filename %}css/file{{ i }}.css{% endcapture %}
             <!-- {{ filename }} -->
+            {% asset '{{ filename }}' %}
         {% endfor %}
         <!-- END LOOP -->
         
@@ -18,14 +18,26 @@
     
     <body>
         <main>
+            <!-- Loop IMAGE files: -->
+            {% for i in (1..3) %}
+                {% capture filename %}img/file{{ i }}.css{% endcapture %}
+                <!-- {{ filename }} -->
+                {% asset '{{ filename }}' %}
+                
+                <!-- Ok, no problem with regular img tag, but let's try ImageMagick: -->
+                {% asset '{{ filename }}' magick:resize='300' alt="{{ i }}" %}
+            {% endfor %}
+            <!-- END LOOP -->
+            
             {{ content }}
         </main>
         
         
-        <!-- And the page defined JS here: -->
-        {% for filename in page.assets.js %}
-            {% asset '{{ filename }}' %}
+        <!-- Loop JS files: -->
+        {% for i in (1..3) %}
+            {% capture filename %}js/file{{ i }}.js{% endcapture %}
             <!-- {{ filename }} -->
+            {% asset '{{ filename }}' %}
         {% endfor %}
         <!-- END LOOP -->
     </body>

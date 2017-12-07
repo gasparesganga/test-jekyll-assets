@@ -1,7 +1,4 @@
 
-include :
-  - .htaccess
-  - .htaccess_static
 plugins :
   - jekyll-assets
 
@@ -11,6 +8,3 @@ assets :
   digest        : true
   source_maps   : false
   compression   : false
-  gzip          : false
-  caching       :
-    enabled : false
